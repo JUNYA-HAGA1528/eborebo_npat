@@ -1,1 +1,16 @@
 @use "global" as *;
+
+
+.header img{
+    height: rem(60);
+    @include mq(md){
+        height: rem(117);
+    }
+}
+
+.header__inner{
+    padding: 0 rem(15);
+    @include mq(md){
+        padding: 0 rem(50);
+    }
+}
