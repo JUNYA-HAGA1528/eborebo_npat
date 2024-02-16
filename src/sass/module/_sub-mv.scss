@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.sub-mv__inner{
+    position: relative;
+}
+
+.sub-mv img{
+    aspect-ratio: 390/210;
+    width: 100%;
+    height:rem(210);
+    object-fit: cover;
+    @include mq(md){
+        height: rem(400);
+    }
+}
+
+.sub-mv__title{
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    margin-left: rem(50);
+    color: $white;
+    margin-left: rem(27); // レスポンシブでも左からの位置を固定
+    bottom: rem(25); // レスポンシブでも下からの位置を固定
+    @include mq(md){
+        margin-left: rem(50); // レスポンシブでも左からの位置を固定
+        bottom: rem(43); // レスポンシブでも下からの位置を固定
+    }
+}
+
+.sub-mv__jp{
+    font-family: $Sans-family;
+    font-size: rem(24);
+    font-weight: $normal;
+    line-height: calc(32/24);
+    letter-spacing: 0.04em;
+    @include mq(md){
+        font-size: rem(40);
+        line-height: calc(100/80);
+    }
+}
+
+.sub-mv__en{
+    font-family: $Oswald-family;
+    font-size: rem(14);
+    font-weight: $bold;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.sub-mv__en{
+    display: inline-block;
+    position: relative;
+}
+
+.sub-mv__en::before {
+    content: "";/*線が表示される*/
+    width: rem(19);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    left: rem(-27);/*0指定すると、文字の上に線が来る*/
+}

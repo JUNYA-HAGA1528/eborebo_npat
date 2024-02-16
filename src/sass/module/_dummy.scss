@@ -14,3 +14,10 @@
         padding: 0 rem(50);
     }
 }
+
+.footer img{
+    height: rem(224);
+    @include mq(md){
+        height: rem(463);
+    }
+}
