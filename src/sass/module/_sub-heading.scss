@@ -1,8 +1,11 @@
 @use "global" as *;
 
 .sub-heading__inner{
-    max-width: $max-width-pc;
+    max-width: $max-width-sp;
     margin: auto;
+    @include mq(md){
+        max-width: $max-width-pc;
+    }
 }
 
 .sub-heading__title{

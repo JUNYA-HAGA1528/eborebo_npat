@@ -17,17 +17,18 @@
     }
 }
 
-.sitemap-cards__item {
-    &:not(:first-child) {
-        margin-top: rem(17);
-    }
-}
-
 .sitemap-cards__subtitle{
     font-size: rem(14);
-   font-weight: $medium;
+    font-weight: $medium;
     line-height: calc(24/14);
     letter-spacing: 0.04em;
+}
+
+.sitemap-cards__subtitle:first-child{
+    margin-top: rem(17);
+    @include mq(md){
+        margin-top: rem(0);
+    }
 }
 
 .sitemap-cards__content{
@@ -41,4 +42,13 @@
     line-height: calc(24/12);
     letter-spacing: 0.04em;
     margin-left: rem(15.5);
+}
+
+.sitemap-cards__list{
+    @include mq(md){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(52) rem(35);
+        margin-top: rem(20);
+    }
 }
