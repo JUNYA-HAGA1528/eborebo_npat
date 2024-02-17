@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.sitemap-cards{
+    flex-direction: column;
+}
+
+.sitemap-cards__title{
+    color: $blue;
+    font-size: rem(14);
+    line-height: calc(19/14);
+    letter-spacing: 0.04em;
+    border-bottom: solid 1px $blue ;
+    padding-bottom: rem(17);
+    @include mq(md){
+        font-size: rem(16);
+        line-height: calc(21/16);
+    }
+}
+
+.sitemap-cards__item {
+    &:not(:first-child) {
+        margin-top: rem(17);
+    }
+}
+
+.sitemap-cards__subtitle{
+    font-size: rem(14);
+   font-weight: $medium;
+    line-height: calc(24/14);
+    letter-spacing: 0.04em;
+}
+
+.sitemap-cards__content{
+    border-left: solid rem(1)  #C3C3C3;
+    margin-top: rem(8);
+    margin-left: rem(6);
+}
+
+.sitemap-cards__text{
+    font-size: rem(12);
+    line-height: calc(24/12);
+    letter-spacing: 0.04em;
+    margin-left: rem(15.5);
+}
