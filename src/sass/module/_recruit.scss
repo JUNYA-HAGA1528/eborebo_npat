@@ -4,6 +4,9 @@
     background-color: $light-blue;
     padding: rem(33) 0 rem(40);
     text-align: center;
+    @include mq(md){
+        padding: rem(54) 0;
+    }
 }
 
 .recruit__inner{
@@ -23,6 +26,12 @@
     line-height: calc(24/20);
     letter-spacing: -0.07em;
     margin-left: rem(-32);
+    @include mq(md){
+        margin-left: rem(-36);
+        font-size: rem(24);
+        letter-spacing: 0.05em;
+        line-height: 1;
+    }
 }
 
 .recruit__subtitle{
@@ -31,4 +40,9 @@
     font-size: rem(14);
     line-height: calc(27/14);
     letter-spacing: -0.1em;
+    @include mq(md){
+        font-size: rem(16);
+        line-height: calc(27/14);
+        letter-spacing: 0.05em;
+    }
 }
