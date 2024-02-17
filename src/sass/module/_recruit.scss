@@ -6,25 +6,29 @@
     text-align: center;
 }
 
+.recruit__inner{
+    max-width: $max-width;
+    margin: auto;
+}
+
 .recruit__wrapper{
     background-color: $white;
     border-radius: rem(15)  0 0;
-    padding: rem(42) 0 rem(47) 0;
+    padding: rem(42) 0;
 }
 
 .recruit__title{
     color: $blue;
     font-size: rem(20);
-    font-weight: $bold;
     line-height: calc(24/20);
-    letter-spacing: 0.05em;
+    letter-spacing: -0.07em;
+    margin-left: rem(-32);
 }
 
 .recruit__subtitle{
     margin-top: rem(17);
     color: $black;
     font-size: rem(14);
-    font-weight: $regular;
     line-height: calc(27/14);
-    letter-spacing: 0.05em;
+    letter-spacing: -0.1em;
 }

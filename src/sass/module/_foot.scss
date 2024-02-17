@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.foot{
+    background-color: $blue;
+    color: $white;
+}
+
+.foot__inner{
+    padding: rem(44) rem(15) rem(35);
+    max-width: $max-width;
+    margin: auto;
+}
+
+.foot__list{
+    border: solid 1px $white ;
+    border-radius: rem(9);
+    display: flex;
+    justify-content: space-between;
+    padding: rem(37.5) rem(45) rem(43) rem(28);
+}
+
+.foot__list + .foot__list{
+    margin-top: rem(17);
+}
+
+.foot__text-en{
+    font-family: $Oswald-family;
+    font-size: rem(32);
+    font-weight: $bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.foot__text-jp{
+    font-size: rem(16);
+    line-height: calc(21/16);
+    letter-spacing: -0.05em;
+}
+
+
+
+
+
+
+
+
+.foot__img img{
+    width: rem(66);
+    height: rem(66);
+}
