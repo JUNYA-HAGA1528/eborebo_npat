@@ -7,7 +7,7 @@
 
 .foot__inner{
     padding: rem(44) rem(15) rem(35);
-    max-width: $max-width;
+    max-width: $max-width-sp;
     margin: auto;
     @include mq(md){
         max-width: rem(1300);

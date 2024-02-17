@@ -1,13 +1,12 @@
 @use "global" as *;
 
 .sub-heading__inner{
-    position: relative;
+    max-width: $max-width-pc;
+    margin: auto;
 }
 
-
 .sub-heading__title{
-    margin-left: rem(50);
-    margin-left: rem(27); // レスポンシブでも左からの位置を固定
+    margin-left: rem(21.5);
     @include mq(md){
         margin-left: rem(50); // レスポンシブでも左からの位置を固定
     }
@@ -15,22 +14,26 @@
 
 .sub-heading__jp{
     font-family: $Sans-family;
-    font-size: rem(24);
+    font-size: rem(20);
     font-weight: $normal;
-    line-height: calc(32/24);
+    line-height: calc(27/20);
     letter-spacing: 0.04em;
     @include mq(md){
-        font-size: rem(40);
-        line-height: calc(100/80);
+        font-size: rem(32);
+        line-height: calc(43/32);
     }
 }
 
 .sub-heading__en{
+    color: $blue;
     font-family: $Oswald-family;
-    font-size: rem(14);
+    font-size: rem(12);
     font-weight: $bold;
     line-height: 1;
     text-transform: uppercase;
+    @include mq(md){
+        font-size: rem(18);
+    }
 }
 
 .sub-heading__en{
@@ -40,11 +43,15 @@
 
 .sub-heading__en::before {
     content: "";/*線が表示される*/
-    width: rem(19);/*線の長さを指定*/
+    width: rem(15.5);/*線の長さを指定*/
     height: rem(1);/*線の太さを指定*/
     /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
     background-color: $black;
     position: absolute;
     top: 50%;
-    left: rem(-27);/*0指定すると、文字の上に線が来る*/
+    left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
+    @include mq(md){
+        width: rem(34);
+        left: rem(-50);
+    }
 }

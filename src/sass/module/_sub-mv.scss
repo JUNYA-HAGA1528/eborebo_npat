@@ -2,6 +2,8 @@
 
 .sub-mv__inner{
     position: relative;
+    max-width: $max-width-pc;
+    margin: auto;
 }
 
 .sub-mv img{
