@@ -1,0 +1,52 @@
+@use "global" as *;
+
+
+
+
+.representative{
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: rem(37.5) 0;
+}
+
+.representative__inner{
+    max-width: $max-width-sp;
+    margin: auto;
+
+}
+
+.representative__wrapper{
+    background-color: $blue;
+    position: relative;
+    display: inline-block;
+    width: rem(360);
+    padding: rem(17) 0;
+    border-radius: rem(5);
+}
+
+.representative__wrapper::before {
+    content: "";/*線が表示される*/
+    width: rem(31);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $white;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+}
+
+.representative__wrapper + .representative__wrapper{
+    margin-top: rem(16);
+    @include mq(md){
+        margin: rem(0);
+        margin-left: rem(24);
+    }
+}
+
+.representative__text{
+    color: $white;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(21/16);
+}
+

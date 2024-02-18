@@ -1,17 +1,24 @@
 @use "global" as *;
 
+.sub-heading{
+    margin-left: rem(21.5);
+    @include mq(md){
+        margin-left: rem(50); // レスポンシブでも左からの位置を固定
+    }
+}
+
+.sub-heading--company{
+    margin-left: rem(21.5);
+    @include mq(md){
+        margin-left: rem(68); // レスポンシブでも左からの位置を固定
+    }
+}
+
 .sub-heading__inner{
     max-width: $max-width-sp;
     margin: auto;
     @include mq(md){
         max-width: $max-width-pc;
-    }
-}
-
-.sub-heading__title{
-    margin-left: rem(21.5);
-    @include mq(md){
-        margin-left: rem(50); // レスポンシブでも左からの位置を固定
     }
 }
 
@@ -35,6 +42,7 @@
     line-height: 1;
     text-transform: uppercase;
     @include mq(md){
+        margin-top: rem(9);
         font-size: rem(18);
     }
 }
@@ -56,5 +64,20 @@
     @include mq(md){
         width: rem(34);
         left: rem(-50);
+    }
+}
+
+.sub-heading__en--company::before{
+    content: "";/*線が表示される*/
+    width: rem(15.5);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
+    @include mq(md){
+        width: rem(50);
+        left: rem(-68);
     }
 }
