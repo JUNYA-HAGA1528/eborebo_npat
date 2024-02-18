@@ -7,6 +7,9 @@
     text-align: center;
     background-color: #F5F5F5;
     padding: rem(37.5) 0;
+    @include mq(md){
+        padding: rem(72) 0;
+    }
 }
 
 .representative__inner{

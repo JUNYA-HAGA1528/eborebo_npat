@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.company-three__inner {
+.company-second__inner {
     max-width: 560px; /* 任意の幅に置き換えてください */
     margin: auto;
     @include mq(md){
@@ -8,92 +8,58 @@
     }
 }
 
-.company-three__flex{
+.company-second__flex{
     @include mq(md){
         display: flex;
         justify-content: space-between;
     }
 }
 
-.company-three__container{
-    padding: 0 rem(15);
-    @include mq(md){
-        width: 70%;
-        padding-right: rem(50);
-    }
-}
-
-.company-three__wrapper{
-    margin-top: rem(20);
+.company-second__container{
+    margin-top: rem(26);
+    padding: 0 rem(15) rem(39.2) ;
     @include mq(md){
         margin-top: rem(0);
-
+        width: 70%;
+        padding: 0 rem(50) rem(104) 0 ;
     }
 }
 
-.company-three__wrapper + .company-three__wrapper{
-    margin-top: rem(29);
-    @include mq(md){
-        margin-top: rem(45);
-    }
-}
-
-.company-three__content{
-    border-top: solid rem(1) #CBCBCB;
-    padding-top: rem(20);
+.company-second__content{
+    font-size: rem(14);
+    line-height: calc(24/14);
     display: flex;
     @include mq(md){
-        padding-top: rem(50);
+        font-size: rem(16);
+        line-height: calc(24/16);
     }
 }
 
-.company-three__name{
+.company-second__content + .company-second__content{
+    margin-top: rem(15);
+}
+
+.company-second__title{
+    width: 23%;
+    border-bottom: solid 1px $blue ;
+    padding-left: rem(8);
+    padding-bottom: rem(15);
     font-size: rem(14);
     line-height: calc(32/14);
-    font-weight: $bold;
     letter-spacing: 0.02em;
-    width: 35%;
     @include mq(md){
-        width: 18.5%;
-        font-size: rem(16);
-        line-height: calc(32/16);
+        width: 12%;
     }
 }
 
-.company-three__info{
+.company-second__text{
+    width: 77%;
+    border-bottom: solid 1px #CBCBCB ;
+    padding-left: rem(20);
+    padding-bottom: rem(15);
     font-size: rem(14);
-    font-weight: $regular;
-    line-height: calc(22/14);
-    letter-spacing: 0.02em;
-    width: 65%;
+    line-height: calc(32/14);
     @include mq(md){
-        width: 81.5%;
-        font-size: rem(16);
-        line-height: calc(28/16);
+        width: 88%;
     }
 }
-
-.company-three__map{
-    margin-top: rem(13);
-    aspect-ratio: 360/177;
-    width: 100%;
-    height: rem(177);
-    object-fit: cover;
-    height: rem(177);
-    @include mq(md){
-        aspect-ratio: 714/351;
-        width: 81.5%;
-        height: rem(351);
-        margin-left: auto; /* 右寄せにする */
-    }
-}
-
-.company-three__representative{
-    margin-top: rem(29);
-    @include mq(md){
-        margin-top: rem(96);
-    }
-}
-
-
-

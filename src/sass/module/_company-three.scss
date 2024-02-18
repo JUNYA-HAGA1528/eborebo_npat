@@ -52,7 +52,7 @@
     line-height: calc(32/14);
     font-weight: $bold;
     letter-spacing: 0.02em;
-    width: 35%;
+    width: 30%;
     @include mq(md){
         width: 18.5%;
         font-size: rem(16);
@@ -65,7 +65,7 @@
     font-weight: $regular;
     line-height: calc(22/14);
     letter-spacing: 0.02em;
-    width: 65%;
+    width: 70%;
     @include mq(md){
         width: 81.5%;
         font-size: rem(16);
@@ -94,6 +94,3 @@
         margin-top: rem(96);
     }
 }
-
-
-
