@@ -1,77 +1,7 @@
 @use "global" as *;
 
-.company__heading{
-    margin-top: rem(40);
-    @include mq(md){
-        margin-top: rem(110);
-    }
-}
 
-.company{
-    background-color: $light-blue;
-    padding: rem(54) 0 rem(37) ;
-    @include mq(md){
-        padding: rem(78) 0 rem(79);
-    }
-}
-
-.company__title{
-    font-size: rem(24);
-    font-weight: 400;
-    line-height: calc(32/24);
-}
-
-.company__title-text{
-    display: inline-block;
-    background-color: $white;
-    color: $blue;
-    padding: rem(10) rem(10) rem(12) rem(15);
-}
-
-.company__title-text + .company__title-text{
-    margin-top: rem(6);
-}
-
-.company__title-text--padding{
-    padding: rem(10) rem(10) rem(12) rem(0);
-}
-
-.company__text{
-    margin-top: rem(15);
-    font-size: rem(14);
-    line-height: calc(26/14);
-    letter-spacing: 0.02em;
-}
-
-.company__representative{
-    margin-top: rem(100);
-    text-align: right;
-}
-
-.company__representative-name{
-    padding-right: rem(18);
-}
-
-.company__representative-img{
-    width: rem(81);
-    height: rem(24);
-    margin-left: auto;
-    margin-top: rem(5);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.company-history__inner {
+.company__inner{
     max-width: 560px; /* 任意の幅に置き換えてください */
     margin: auto;
     @include mq(md){
@@ -79,58 +9,63 @@
     }
 }
 
-.company-history__flex{
+
+.sub-heading__jp{
+    font-family: $Sans-family;
+    font-size: rem(20);
+    font-weight: $normal;
+    line-height: calc(27/20);
+    letter-spacing: 0.04em;
     @include mq(md){
-        display: flex;
-        justify-content: space-between;
+        font-size: rem(32);
+        line-height: calc(43/32);
     }
 }
 
-.company-history__container{
-    margin-top: rem(26);
-    padding: 0 rem(15) rem(39.2) ;
+.sub-heading__en{
+    color: $blue;
+    font-family: $Oswald-family;
+    font-size: rem(12);
+    font-weight: $bold;
+    line-height: 1;
+    text-transform: uppercase;
     @include mq(md){
-        margin-top: rem(0);
-        width: 70%;
-        padding: 0 rem(50) rem(104) 0 ;
+        margin-top: rem(9);
+        font-size: rem(18);
     }
 }
 
-.company-history__content{
-    font-size: rem(14);
-    line-height: calc(24/14);
-    display: flex;
+.sub-heading__en{
+    display: inline-block;
+    position: relative;
+}
+
+.sub-heading__en::before {
+    content: "";/*線が表示される*/
+    width: rem(15.5);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
     @include mq(md){
-        font-size: rem(16);
-        line-height: calc(24/16);
+        width: rem(34);
+        left: rem(-50);
     }
 }
 
-.company-history__content + .company-history__content{
-    margin-top: rem(15);
-}
-
-.company-history__title{
-    width: 23%;
-    border-bottom: solid 1px $blue ;
-    padding-left: rem(8);
-    padding-bottom: rem(15);
-    font-size: rem(14);
-    line-height: calc(32/14);
-    letter-spacing: 0.02em;
+.sub-heading__en--company::before{
+    content: "";/*線が表示される*/
+    width: rem(15.5);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
     @include mq(md){
-        width: 12%;
-    }
-}
-
-.company-history__text{
-    width: 77%;
-    border-bottom: solid 1px #CBCBCB ;
-    padding-left: rem(20);
-    padding-bottom: rem(15);
-    font-size: rem(14);
-    line-height: calc(32/14);
-    @include mq(md){
-        width: 88%;
+        width: rem(50);
+        left: rem(-68);
     }
 }
