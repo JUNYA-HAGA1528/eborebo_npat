@@ -2,9 +2,23 @@
 
 .features{
     background-color: $light-blue;
-    padding: rem(26) 0 0 0 ;
+    padding: rem(26) 0 rem(48) ;
     @include mq(md){
-        padding: rem(64) 0 0 0 ;
+        padding: rem(64) 0 rem(80);
+    }
+}
+
+.features{
+    background-image: url(../images/common/features-bg-sp.png);
+    background-position:bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% rem(1062) ;
+    @include mq(md){
+        background-image: url(../images/common/features-bg.png);
+        background-position:bottom center;
+        background-repeat: no-repeat;
+        background-size: rem(1300) rem(850) ;
+
     }
 }
 
@@ -127,5 +141,12 @@
     margin-top: rem(68);
     @include mq(md){
         margin-top: rem(9);
+    }
+}
+
+.features__slider{
+    margin-top: rem(18);
+    @include mq(md){
+        margin-top: rem(80);
     }
 }

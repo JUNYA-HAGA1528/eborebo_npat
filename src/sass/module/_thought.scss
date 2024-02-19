@@ -2,7 +2,7 @@
 
 .thought__content{
     text-align: center;
-    color: $black;
+    color: $white;
     @include mq(md){
         margin-top: rem(14);
     }

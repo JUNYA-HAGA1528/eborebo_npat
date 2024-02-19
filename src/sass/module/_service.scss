@@ -1,7 +1,6 @@
 @use "global" as *;
 
-
-.company__inner{
+.service__inner{
     max-width: 560px; /* 任意の幅に置き換えてください */
     margin: auto;
     @include mq(md){
