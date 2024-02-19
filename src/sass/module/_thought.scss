@@ -1,2 +1,49 @@
 @use "global" as *;
 
+.thought__content{
+    text-align: center;
+    color: $black;
+    @include mq(md){
+        margin-top: rem(14);
+    }
+}
+
+.thought__title{
+    display: inline-block;
+    border: solid 1px $white ;
+    width: rem(360);
+    padding: rem(13) 0 rem(16);
+    font-size: rem(40);
+    font-weight: $medium;
+    line-height: calc(60/40);
+    letter-spacing: 0.09em;
+    @include mq(md){
+        width: rem(488);
+        font-size: rem(58);
+        line-height: 1;
+    }
+}
+
+.thought__subtitle{
+    margin-top: rem(11);
+    font-size: rem(32);
+    line-height: calc(50/32);
+    letter-spacing: 0.09em;
+    @include mq(md){
+        margin-top: rem(8);
+        font-size: rem(42);
+        line-height: calc(60/42);
+    }
+}
+
+.thought__text{
+    margin-top: rem(35);
+    font-size: rem(14);
+    line-height: calc(32/14);
+    letter-spacing: 0.02em;
+    @include mq(md){
+        margin-top: rem(28);        
+        font-size: rem(16);
+        line-height: calc(32/16);
+    }
+}
