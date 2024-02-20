@@ -1,10 +1,17 @@
 @use "global" as *;
 
-
-.service__inner{
+.service-container__inner{
     max-width: 560px; /* 任意の幅に置き換えてください */
     margin: auto;
     @include mq(md){
         max-width: $max-width-pc;
+    }
+}
+
+
+.service-container__content + .service-container__content{
+    margin-top: rem(60);
+    @include mq(md){
+        margin-top: rem(65);
     }
 }
