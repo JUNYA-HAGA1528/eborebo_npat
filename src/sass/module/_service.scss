@@ -5,5 +5,10 @@
     margin: auto;
     @include mq(md){
         max-width: $max-width-pc;
+        padding: 0 rem(50);
     }
+}
+
+.service__content{
+    margin-top: rem(69);
 }
