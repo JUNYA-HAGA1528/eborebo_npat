@@ -1,0 +1,187 @@
+@use "global" as *;
+
+.service-second__container{
+    background-image: url(../images/common/service-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(73) rem(50) rem(105.5);
+}
+
+.service-second__flex{
+    @include mq(md){
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.service-second__sentence{
+    width: 62.4%;
+}
+
+.service-second__lineup{
+    padding-bottom: rem(7.5);
+    font-size: rem(24);
+    line-height: calc(32/24);
+    letter-spacing: 0.04em;
+    border-bottom: solid 1px $black ;    
+}
+
+.service-second__title{
+    margin-top: rem(17.5);
+    font-size: rem(40);
+    line-height: calc(53/40);
+    letter-spacing: 0.04em;
+}
+
+.service-second__text{
+    margin-top: rem(24);
+    font-size: rem(16);
+    line-height: calc(32/16);
+    letter-spacing: 0.02em;
+}
+
+.service-second__number{
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px $white;
+    font-family: $Oswald-family;
+    font-weight: $bold;
+    font-size: rem(173);
+    line-height: 1;
+    width: 20%;  
+    text-align: left;
+    margin-top: rem(-20);
+}
+
+
+
+/*---sp---*/
+.service-second__container-sp{
+    background-image: url(../images/common/service-bg-sp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(0) rem(16) rem(35) rem(22);
+    color: $white;
+}
+
+.service-second__sentence-sp{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: solid 1px $white ;
+    padding-bottom: rem(13);
+}
+
+.service-second__lineup-sp{
+    font-size: rem(16);
+    line-height: calc(21/16);
+    letter-spacing: 0.04em;
+}
+
+.service-second__number-sp{
+    font-family: $Oswald-family;
+    font-size: rem(69);
+    font-weight: $bold;
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px $white;
+
+}
+
+.service-second__title-sp{
+    margin-top: rem(16);
+    font-size: rem(20);
+    line-height: calc(28/20);
+    letter-spacing: 0.06em;
+}
+
+.service-second__text-sp{
+    margin-top: rem(10);
+    font-size: rem(14);
+    line-height: calc(22/14);
+    letter-spacing: 0.02em;
+}
+
+
+
+
+
+
+
+
+
+
+/*---画像---*/
+.service-second__wrapper{
+    margin-top: rem(20);
+    text-align: center;
+    @include mq(md){
+        background-color: $white;
+        padding: rem(40) rem(34) rem(47) rem(50);
+        margin-top: rem(-30);
+        margin-right: rem(50);
+        box-shadow: 0 0 rem(10) rem(2) rgba(0, 0, 0, 0.25);
+    }
+}
+
+.service-second__meta{
+    margin-top: rem(40);
+    font-size: rem(18);
+    line-height: calc(32/18);
+    letter-spacing: 0.02em;
+    text-align: left;
+    @include mq(md){
+        margin-top: rem(56);
+        font-size: rem(20);
+        line-height: calc(32/20);
+    }
+}
+
+.service-second__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-second__item {
+    @include mq(md){
+        flex-basis: 20.5%; /* 初期の幅を設定 */
+    }
+}
+
+.service-second__item + .service-second__item{
+    margin-left: rem(20);
+}
+
+/* 枚数が増えたときのための処理 */
+.service-second__item:nth-child(2n + 1){
+    margin-left: 0;
+    @include mq(md){
+        margin-left: rem(20);
+    }
+}
+
+@media (max-width: 1100px) {
+    .service-second__item {
+        flex-basis: 30%; /* 2列に折り返すために幅を変更 */
+    }
+}
+
+@media (max-width: 850px) {
+    .service-second__item {
+        flex-basis: 48.1%; /* 2列に折り返すために幅を変更 */
+    }
+}
+
+.service-second__item{
+    margin-top: rem(14);
+}
+
+.service-second__name{
+    text-align: left;
+    margin-top: rem(10);
+    font-size: rem(12);
+    line-height: calc(24/12);
+    letter-spacing: 0.04em;
+}
