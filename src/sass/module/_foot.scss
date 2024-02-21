@@ -11,7 +11,7 @@
     margin: auto;
     @include mq(md){
         max-width: rem(1300);
-        padding: rem(44) rem(50) rem(35);
+        padding: rem(44) rem(50) rem(51);
     }
 }
 
@@ -43,6 +43,9 @@
     justify-content: space-between;
     align-items: center;
     padding: rem(37.5) rem(45) rem(43) rem(28);
+    @include mq(md){
+        padding: rem(64) rem(56) rem(72) rem(61);
+    }
 }
 
 .foot__text-en{
@@ -63,11 +66,14 @@
     letter-spacing: -0.1em;
     @include mq(md){
         font-size: rem(20);
-        line-height: calc(27/20);
+        line-height: 1;
     }
 }
 
 .foot__img img{
     width: rem(66);
     height: rem(66);
+    @include mq(md){
+        margin-top: rem(5);
+    }
 }

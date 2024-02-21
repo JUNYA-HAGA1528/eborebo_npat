@@ -27,7 +27,7 @@
     bottom: rem(25); // レスポンシブでも下からの位置を固定
     @include mq(md){
         margin-left: rem(50); // レスポンシブでも左からの位置を固定
-        bottom: rem(43); // レスポンシブでも下からの位置を固定
+        bottom: rem(36.8); // レスポンシブでも下からの位置を固定
     }
 }
 
@@ -51,7 +51,7 @@
     text-transform: uppercase;
     @include mq(md){
         font-size: rem(24);
-        line-height: calc(60/24);
+        line-height: calc(50/24);
     }
 }
 
