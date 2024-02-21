@@ -13,7 +13,7 @@
         background-size: rem(522) rem(193);
         max-width: $max-width-pc;
         margin: auto;
-        padding: rem(83) 0 rem(79);
+        padding: rem(83) 0 rem(70.4);
     }
 }
 
@@ -37,7 +37,12 @@
     vertical-align: top; /* 上端に配置 */
     background-color: $white;
     color: $blue;
-    padding: rem(10) rem(10) rem(12) rem(15);
+    padding: rem(10) rem(41.6) rem(12) rem(18);
+    letter-spacing: -0.08em;
+    @include mq(md){
+        padding: rem(10) rem(64) rem(12) rem(18);
+        letter-spacing: -0.05em;
+    }
 }
 
 .company-description__title-text + .company-description__title-text{
@@ -46,33 +51,38 @@
 
 .company-description__title-margin{
     @include mq(md){
-        margin: rem(7.5) 0;
+        margin: rem(13.6) 0;
     }
 }
 
 .company-description__title-text--padding{
-    padding: rem(10) rem(10) rem(12) rem(0);
+    padding: rem(10) rem(43.2) rem(12) rem(0);
+    @include mq(md){
+        padding: rem(10) rem(73.6) rem(12) rem(0);
+        letter-spacing: -0.1em;
+    }
 }
 
 .company-description__text{
-    margin-top: rem(15);
+    margin-top: rem(9.6);
     font-size: rem(14);
     line-height: calc(26/14);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.16em;
     @include mq(md){
-        margin-top: rem(31);
+        margin-top: rem(24);
         font-size: rem(16);
         line-height: calc(32/16);
     }
 }
 
 .company-description__representative{
-    margin-top: rem(100);
+    margin-top: rem(14.4);
     text-align: right;
 }
 
 .company-description__representative-name{
     padding-right: rem(18);
+    letter-spacing: -0.16em;
 }
 
 .company-description__name{

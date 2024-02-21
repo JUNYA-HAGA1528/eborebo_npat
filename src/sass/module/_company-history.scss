@@ -16,12 +16,73 @@
     }
 }
 
+
+
+
+
+
+.company-history__heading{
+    margin-left: rem(21.5);
+    @include mq(md){
+        margin-left: rem(64); // レスポンシブでも左からの位置を固定
+    }
+}
+
+.company-history__jp{
+    font-family: $Sans-family;
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: calc(27/20);
+    @include mq(md){
+        font-size: rem(32);
+        line-height: calc(43/32);
+    }
+}
+
+.company-history__en{
+    color: $blue;
+    font-family: $Oswald-family;
+    font-size: rem(12);
+    font-weight: $bold;
+    line-height: 1;
+    text-transform: uppercase;
+    @include mq(md){
+        margin-top: rem(9);
+        font-size: rem(18);
+    }
+}
+
+.company-history__en{
+    display: inline-block;
+    position: relative;
+}
+
+.company-history__en::before {
+    content: "";/*線が表示される*/
+    width: rem(15.5);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
+    @include mq(md){
+        width: rem(58.4);
+        left: rem(-68);
+        top: 42%;
+    }
+}
+
+
+
+
+
 .company-history__container{
-    margin-top: rem(26);
+    margin-top: rem(30.4);
     padding: 0 rem(15) rem(66.2) ;
     @include mq(md){
         margin-top: rem(0);
-        width: 70%;
+        width: 77.2%;
         padding: 0 rem(50) rem(104) 0 ;
     }
 }
@@ -34,12 +95,15 @@
         font-size: rem(16);
         line-height: calc(24/16);
         border-bottom: solid 1px #CBCBCB ;
-        padding-bottom: rem(25);
+        padding: rem(5) 0 rem(28.8) rem(20);
     }
 }
 
 .company-history__content + .company-history__content{
-    margin-top: rem(16);
+    margin-top: rem(8);
+    @include mq(md){
+        margin-top: rem(18);
+    }
 }
 
 .company-history__title{
@@ -51,7 +115,8 @@
     line-height: 1;
     letter-spacing: 0.02em;
     @include mq(md){
-        width: 12%;
+        width: 8.9%;
+        font-size: rem(16);
         padding-bottom: 0;
     }
 }
@@ -59,15 +124,16 @@
 .company-history__text{
     margin-top: rem(6);
     border-bottom: solid 1px #CBCBCB ;
-    padding-bottom: rem(11.6);
+    padding-bottom: rem(12);
     font-size: rem(14);
     line-height: calc(20/14);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.1em;
     @include mq(md){
         width: 88%;
         margin-top: rem(0);
         border-bottom: none;
         padding-bottom: 0;
+        letter-spacing: 0.025em;
     }
 }
 

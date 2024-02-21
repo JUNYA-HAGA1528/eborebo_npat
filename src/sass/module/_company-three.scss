@@ -15,6 +15,65 @@
     }
 }
 
+
+
+
+.company-three__heading{
+    margin-left: rem(21.5);
+    @include mq(md){
+        margin-left: rem(68); // レスポンシブでも左からの位置を固定
+    }
+}
+
+.company-three__jp{
+    font-family: $Sans-family;
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: calc(27/20);
+    letter-spacing: 0.18em;
+    @include mq(md){
+        font-size: rem(32);
+        line-height: calc(43/32);
+        letter-spacing: 0.04em;
+    }
+}
+
+.company-three__en{
+    color: $blue;
+    font-family: $Oswald-family;
+    font-size: rem(12);
+    font-weight: $bold;
+    line-height: 1;
+    text-transform: uppercase;
+    @include mq(md){
+        margin-top: rem(9);
+        font-size: rem(18);
+    }
+}
+
+.company-three__en{
+    display: inline-block;
+    position: relative;
+}
+
+.company-three__en::before {
+    content: "";/*線が表示される*/
+    width: rem(15.5);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
+    @include mq(md){
+        width: rem(50);
+        left: rem(-68);
+        top: 42%;
+    }
+}
+
+
+
 .company-three__container{
     padding: 0 rem(15);
     @include mq(md){
@@ -24,7 +83,7 @@
 }
 
 .company-three__wrapper{
-    margin-top: rem(20);
+    margin-top: rem(17.6);
     @include mq(md){
         margin-top: rem(0);
 
@@ -43,13 +102,13 @@
     padding-top: rem(20);
     display: flex;
     @include mq(md){
-        padding-top: rem(50);
+        padding-top: rem(46.4);
     }
 }
 
 .company-three__name{
     font-size: rem(14);
-    line-height: calc(32/14);
+    line-height: 2.1;
     font-weight: $bold;
     letter-spacing: 0.02em;
     width: 30%;
@@ -65,7 +124,7 @@
     font-weight: $regular;
     line-height: calc(22/14);
     letter-spacing: 0.02em;
-    width: 70%;
+    width: 73%;
     @include mq(md){
         width: 81.5%;
         font-size: rem(16);
@@ -89,7 +148,7 @@
 }
 
 .company-three__representative{
-    margin-top: rem(29);
+    margin-top: rem(32);
     @include mq(md){
         margin-top: rem(96);
     }
