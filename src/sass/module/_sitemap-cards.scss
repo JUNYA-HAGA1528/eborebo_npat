@@ -17,8 +17,22 @@
     }
 }
 
+.sitemap-cards__subtitle--margin{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(0);
+    }
+}
+
+.sitemap-cards__item + .sitemap-cards__item{
+    margin-top: rem(35);
+    @include mq(md){
+        margin-top: rem(0);
+    }
+}
+
 .sitemap-cards__subtitle{
-    font-size: rem(14);
+    font-size: rem(12);
     font-weight: $medium;
     line-height: calc(24/14);
     letter-spacing: 0.04em;
@@ -33,22 +47,26 @@
 
 .sitemap-cards__content{
     border-left: solid rem(1)  #C3C3C3;
-    margin-top: rem(8);
+    margin-top: rem(4);
     margin-left: rem(6);
 }
 
 .sitemap-cards__text{
-    font-size: rem(12);
-    line-height: calc(24/12);
-    letter-spacing: 0.04em;
+    font-size: rem(10);
+    line-height: calc(25/12);
+    letter-spacing: -0.07em;
     margin-left: rem(15.5);
+    @include mq(md){
+        line-height: 2.15;
+    }
 }
 
 .sitemap-cards__list{
     @include mq(md){
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: rem(52) rem(35);
+        gap: rem(46) rem(23);
         margin-top: rem(20);
+        padding-bottom: rem(22.4);
     }
 }

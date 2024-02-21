@@ -24,13 +24,14 @@
 
 .sub-heading__jp{
     font-family: $Sans-family;
-    font-size: rem(20);
+    font-size: rem(18);
     font-weight: $normal;
     line-height: calc(27/20);
-    letter-spacing: 0.04em;
+    letter-spacing: -0.15em;
     @include mq(md){
         font-size: rem(32);
         line-height: calc(43/32);
+        letter-spacing: -0.3em;
     }
 }
 
@@ -64,6 +65,7 @@
     @include mq(md){
         width: rem(34);
         left: rem(-50);
+        top: 75%;
     }
 }
 
