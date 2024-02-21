@@ -127,16 +127,7 @@
 }
 
 .service-second__meta{
-    margin-top: rem(40);
-    font-size: rem(18);
-    line-height: calc(32/18);
-    letter-spacing: 0.02em;
     text-align: left;
-    @include mq(md){
-        margin-top: rem(56);
-        font-size: rem(20);
-        line-height: calc(32/20);
-    }
 }
 
 .service-second__list {
@@ -147,18 +138,6 @@
 .service-second__item {
     @include mq(md){
         flex-basis: 20.5%; /* 初期の幅を設定 */
-    }
-}
-
-.service-second__item + .service-second__item{
-    margin-left: rem(20);
-}
-
-/* 枚数が増えたときのための処理 */
-.service-second__item:nth-child(2n + 1){
-    margin-left: 0;
-    @include mq(md){
-        margin-left: rem(20);
     }
 }
 
@@ -174,13 +153,37 @@
     }
 }
 
+/* 2の倍数に要素に左の余白を設定 */
+.service-second__item:nth-child(2n) {
+    margin-left: rem(13);
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 2番目以降の要素に左の余白を設定 */
+.service-second__item + .service-second__item {
+    @include mq(md){
+        margin-left: rem(13);
+    }
+}
+
 .service-second__item{
     margin-top: rem(14);
 }
 
+.service-third__img img{
+    aspect-ratio:173/107 ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md){
+        aspect-ratio:218/134 ; 
+    }
+}
+
 .service-second__name{
     text-align: left;
-    margin-top: rem(10);
     font-size: rem(12);
     line-height: calc(24/12);
     letter-spacing: 0.04em;

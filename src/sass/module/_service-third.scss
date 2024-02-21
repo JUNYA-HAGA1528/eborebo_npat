@@ -121,7 +121,6 @@
 /*---画像---*/
 .service-third__wrapper{
     margin-top: rem(20);
-    text-align: center;
     @include mq(md){
         background-color: $white;
         padding: rem(40) rem(34) rem(47) rem(50);
@@ -132,39 +131,74 @@
 }
 
 .service-third__meta{
+    margin-top: rem(40);
+    font-size: rem(18);
+    line-height: calc(32/18);
+    letter-spacing: 0.02em;
     text-align: left;
+    @include mq(md){
+        margin-top: rem(56);
+        font-size: rem(20);
+        line-height: calc(32/20);
+    }
 }
 
 .service-third__list {
-    display: flex;
-    justify-content: space-between; /* 要素を均等に配置 */
-    flex-wrap: wrap;
-}
-
-.service-third__item {
     @include mq(md){
-        flex-basis: 15.7%; /* 初期の幅を設定 */
+        display: flex;
     }
 }
 
-@media (max-width: 1100px) {
-    .service-third__item {
-        flex-basis: 30%; /* 2列に折り返すために幅を変更 */
-    }
-}
-
-@media (max-width: 850px) {
-    .service-third__item {
-        flex-basis: 48.1%; /* 2列に折り返すために幅を変更 */
+.service-third__item + .service-third__item{
+    margin-top: rem(14);
+    @include mq(md){
+        margin-left: rem(32);
     }
 }
 
 .service-third__item{
     margin-top: rem(14);
+    @include mq(md){
+        max-width: calc(22.75% - 2rem * 3 / 4 );
+        width: 100%;
+    }
+}
+
+.service-third__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 横方向の中央揃え */
+    text-align: left; /* テキストを中央揃え */
+}
+
+.service-third__img img{
+    aspect-ratio:360/221 ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md){
+        aspect-ratio:218/134 ; 
+    }
 }
 
 .service-third__name{
+    
+    margin-top: rem(10);
     font-size: rem(12);
     line-height: calc(24/12);
     letter-spacing: 0.04em;
+}
+
+.triangle {
+    display: flex;
+    justify-content: center;
+    @include mq(md){
+        margin-top: rem(-60);
+        flex-direction: column;
+    }
+}
+
+.triangle img{
+    width: rem(20);
+    height: rem(15);
 }
