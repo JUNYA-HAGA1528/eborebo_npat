@@ -1,5 +1,24 @@
 @use "global" as *;
 
+.thought {
+    text-align: center; /* thought__imgを中央寄せ */
+}
+
+.thought__img {
+    display: inline-block; /* ブロック要素をインラインブロック要素に変更 */
+}
+
+
+
+.thought__img img{
+    width: rem(304);
+    height: rem(675);
+    object-fit: cover;
+    @include mq(md){
+        
+    }
+}
+
 .thought__content{
     text-align: center;
     color: $white;
@@ -8,15 +27,19 @@
     }
 }
 
+
+
+
 .thought__title{
     display: inline-block;
+    margin-top: rem(19.2);
     border: solid 1px $white ;
     width: rem(360);
-    padding: rem(13) 0 rem(16);
+    padding: rem(6.4) 0 rem(12.8);
     font-size: rem(40);
     font-weight: $medium;
     line-height: calc(60/40);
-    letter-spacing: 0.09em;
+    letter-spacing: -0.14em;
     @include mq(md){
         width: rem(488);
         font-size: rem(58);
@@ -28,7 +51,7 @@
     margin-top: rem(11);
     font-size: rem(32);
     line-height: calc(50/32);
-    letter-spacing: 0.09em;
+    letter-spacing: -0.012em;
     @include mq(md){
         margin-top: rem(8);
         font-size: rem(42);
@@ -37,10 +60,11 @@
 }
 
 .thought__text{
-    margin-top: rem(35);
+    margin-top: rem(24);
     font-size: rem(14);
     line-height: calc(32/14);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.119em;
+    text-align: left;
     @include mq(md){
         margin-top: rem(28);        
         font-size: rem(16);

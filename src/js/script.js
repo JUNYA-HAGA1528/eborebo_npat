@@ -13,7 +13,7 @@ jQuery(function ($) { // この中であればWordPressでも「$」が使用可
         spaceBetween: 40
       }
     },
-    spaceBetween: 24,
+    spaceBetween: 15,
     speed: 5000,
     loop: true,
     autoplay: {

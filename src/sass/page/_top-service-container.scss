@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .top-service-container{
-    margin-top: rem(15);
+    margin-top: rem(12.8);
     padding-bottom: rem(20);
     @include mq(md){
         margin-top: rem(69);

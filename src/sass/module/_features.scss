@@ -1,5 +1,9 @@
 @use "global" as *;
 
+
+
+
+
 .features{
     background-color: $light-blue;
     padding: rem(26) 0 rem(48) ;
@@ -49,6 +53,7 @@
     font-size: rem(14);
     font-weight: $bold;
     line-height: calc(27/14);
+    margin-left: rem(7);
     @include mq(md){
         font-size: rem(20);
     }
@@ -61,12 +66,12 @@
 
 .features__subtitle::before {
     content: "";/*線が表示される*/
-    width: rem(15.5);/*線の長さを指定*/
+    width: rem(28.8);/*線の長さを指定*/
     height: rem(1);/*線の太さを指定*/
     /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
     background-color: $black;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
     @include mq(md){
         width: rem(101);
@@ -76,7 +81,7 @@
 
 
 .features__sentence{
-    margin-top: rem(16);
+    margin-top: rem(9.6);
     font-size: rem(32);
     font-weight: 400;
     letter-spacing: 0.13em;
@@ -92,20 +97,27 @@
     vertical-align: top; /* 上端に配置 */
     background-color: $white;
     color: $blue;
-    padding: rem(5) rem(35) rem(5) rem(18);
+    padding: rem(5) rem(27.2) rem(9.6) rem(18);
+    letter-spacing: 0.09em;
     @include mq(md){
         padding: rem(5) rem(40) rem(5) rem(18);
     }
 }
 
+.features__title--letter{
+    letter-spacing: 0em;
+    padding: rem(5) rem(33.6) rem(9.6) rem(18);
+}
+
 .features__title-margin{
-    margin: rem(7.5) 0;
+    margin: rem(9.6) 0;
 }
 
 .features__text{
-    margin-top: rem(18);
+    margin-top: rem(9.6);
     font-size: rem(14);
     line-height: calc(32/14);
+    letter-spacing: -0.137em;
     @include mq(md){
         margin-top: rem(25);
         font-size: rem(16);
@@ -116,7 +128,7 @@
 
 
 .features__img{
-    margin-top: rem(12);
+    margin-top: rem(16);
     margin-right: calc(50% - 50vw);
     @include mq(md){
         margin-top: rem(-90);
