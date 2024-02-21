@@ -62,22 +62,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: rem(0) rem(16) rem(35) rem(22);
+    padding: rem(62.4) rem(16) rem(83.2) rem(22);
     color: $white;
 }
 
 .service-second__sentence-sp{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     border-bottom: solid 1px $white ;
-    padding-bottom: rem(13);
 }
 
 .service-second__lineup-sp{
     font-size: rem(16);
     line-height: calc(21/16);
     letter-spacing: 0.04em;
+    margin-top: rem(51.2);
 }
 
 .service-second__number-sp{
@@ -91,17 +91,18 @@
 }
 
 .service-second__title-sp{
-    margin-top: rem(16);
+    margin-top: rem(12.8);
     font-size: rem(20);
+    font-weight: $normal;
     line-height: calc(28/20);
-    letter-spacing: 0.06em;
+    letter-spacing: -0.04em;
 }
 
 .service-second__text-sp{
-    margin-top: rem(10);
+    margin-top: rem(8);
     font-size: rem(14);
     line-height: calc(22/14);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.14em;
 }
 
 
@@ -115,7 +116,7 @@
 
 /*---画像---*/
 .service-second__wrapper{
-    margin-top: rem(20);
+    margin-top: rem(36.8);
     text-align: center;
     @include mq(md){
         background-color: $white;
@@ -127,7 +128,12 @@
 }
 
 .service-second__meta{
-    text-align: left;
+    text-align: center;
+    margin-left: rem(-22.4);
+    letter-spacing:-0.04em;
+    @include mq(md){
+        text-align: left;
+    }
 }
 
 .service-second__list {
@@ -169,7 +175,14 @@
 }
 
 .service-second__item{
-    margin-top: rem(14);
+    margin-top: rem(19.2);
+}
+
+.service-second__item:nth-child(n+3) {
+    margin-top: rem(25.6);
+    @include mq(md){
+        margin-top: rem(0);
+    }
 }
 
 .service-third__img img{
@@ -183,8 +196,18 @@
 }
 
 .service-second__name{
+    margin-top: rem(8);
     text-align: left;
     font-size: rem(12);
     line-height: calc(24/12);
     letter-spacing: 0.04em;
+}
+
+.circle-black{
+    width: rem(6);
+    height: rem(6);
+    background-color: $black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: rem(4);
 }

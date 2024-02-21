@@ -67,7 +67,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: rem(0) rem(16) rem(35) rem(22);
+    padding: rem(32) rem(16) rem(72) rem(22);
     color: $white;
 }
 
@@ -76,13 +76,12 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: solid 1px $white ;
-    padding-bottom: rem(13);
 }
 
 .service-third__lineup-sp{
+    margin-top: rem(52);
     font-size: rem(16);
     line-height: calc(21/16);
-    letter-spacing: 0.04em;
 }
 
 .service-third__number-sp{
@@ -96,17 +95,18 @@
 }
 
 .service-third__title-sp{
-    margin-top: rem(16);
+    margin-top: rem(12.8);
     font-size: rem(20);
+    font-weight: $normal;
     line-height: calc(28/20);
-    letter-spacing: 0.06em;
+    letter-spacing: -0.06em;
 }
 
 .service-third__text-sp{
-    margin-top: rem(10);
+    margin-top: rem(6.4);
     font-size: rem(14);
     line-height: calc(22/14);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.15em;
 }
 
 
@@ -131,11 +131,12 @@
 }
 
 .service-third__meta{
-    margin-top: rem(40);
+    margin-top: rem(38);
     font-size: rem(18);
     line-height: calc(32/18);
     letter-spacing: 0.02em;
-    text-align: left;
+    text-align: center;
+    margin-left: rem(-22.4);
     @include mq(md){
         margin-top: rem(56);
         font-size: rem(20);
@@ -157,10 +158,17 @@
 }
 
 .service-third__item{
-    margin-top: rem(14);
+    margin-top: rem(25.6);
     @include mq(md){
         max-width: calc(22.75% - 2rem * 3 / 4 );
         width: 100%;
+    }
+}
+
+.service-third__item:nth-child(n+2) {
+    margin-top: rem(24);
+    @include mq(md){
+        margin-top: rem(0);
     }
 }
 
@@ -182,16 +190,16 @@
 }
 
 .service-third__name{
-    
-    margin-top: rem(10);
+    margin-top: rem(4);
     font-size: rem(12);
     line-height: calc(24/12);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
 }
 
 .triangle {
     display: flex;
     justify-content: center;
+    margin-top: rem(25);
     @include mq(md){
         margin-top: rem(-60);
         flex-direction: column;
@@ -199,6 +207,6 @@
 }
 
 .triangle img{
-    width: rem(20);
-    height: rem(15);
+    width: rem(30);
+    height: rem(16);
 }
