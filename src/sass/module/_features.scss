@@ -8,7 +8,7 @@
     background-color: $light-blue;
     padding: rem(26) 0 rem(48) ;
     @include mq(md){
-        padding: rem(64) 0 rem(80);
+        padding: rem(60.8) 0 rem(80);
     }
 }
 
@@ -56,6 +56,7 @@
     margin-left: rem(7);
     @include mq(md){
         font-size: rem(20);
+        margin-left: rem(0);
     }
 }
 
@@ -74,8 +75,9 @@
     top: 45%;
     left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
     @include mq(md){
-        width: rem(101);
+        width: rem(100);
         left: rem(-110);
+        top: 47%;
     }
 }
 
@@ -87,7 +89,7 @@
     letter-spacing: 0.13em;
     line-height: 1.5;
     @include mq(md){
-        margin-top: rem(21);
+        margin-top: rem(16);
         font-size: rem(48);
     }
 }
@@ -100,13 +102,16 @@
     padding: rem(5) rem(27.2) rem(9.6) rem(18);
     letter-spacing: 0.09em;
     @include mq(md){
-        padding: rem(5) rem(40) rem(5) rem(18);
+        padding: rem(4.8) rem(33.6) rem(3.2) rem(18);
     }
 }
 
 .features__title--letter{
     letter-spacing: 0em;
     padding: rem(5) rem(33.6) rem(9.6) rem(18);
+    @include mq(md){
+        padding: rem(4.8) rem(48) rem(3.2) rem(18);
+    }
 }
 
 .features__title-margin{
@@ -119,10 +124,10 @@
     line-height: calc(32/14);
     letter-spacing: -0.137em;
     @include mq(md){
-        margin-top: rem(25);
+        margin-top: rem(18.4);
         font-size: rem(16);
-        letter-spacing: -0.1em;
-        line-height: calc(30/16);
+        letter-spacing: -0.094em;
+        line-height: calc(32/16);
     }
 }
 
@@ -131,7 +136,7 @@
     margin-top: rem(16);
     margin-right: calc(50% - 50vw);
     @include mq(md){
-        margin-top: rem(-90);
+        margin-top: rem(-92.8);
         margin-left: rem(32);
    }
 }
@@ -159,6 +164,6 @@
 .features__slider{
     margin-top: rem(18);
     @include mq(md){
-        margin-top: rem(80);
+        margin-top: rem(64);
     }
 }

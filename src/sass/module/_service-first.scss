@@ -6,39 +6,48 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: rem(73) rem(50) rem(59);
+    @include mq(md){
+        padding: rem(48) rem(50) rem(89.6);
+    }
 }
 
 .service-first__flex{
     @include mq(md){
         display: flex;
         justify-content: space-between;
+        color: $white;
     }
 }
 
 .service-first__sentence{
     width: 62.4%;
+    @include mq(md){
+        margin-top: rem(25);
+        width: 68%;
+    }
 }
 
 .service-first__lineup{
     padding-bottom: rem(7.5);
     font-size: rem(24);
     line-height: calc(32/24);
-    letter-spacing: 0.04em;
-    border-bottom: solid 1px $black ;    
+    letter-spacing: -0.18em;
+    border-bottom: solid 1px $white ;    
 }
 
 .service-first__title{
     margin-top: rem(17.5);
     font-size: rem(40);
+    font-weight: $normal;
     line-height: calc(53/40);
-    letter-spacing: 0.04em;
+    letter-spacing: -0.17em;
 }
 
 .service-first__text{
-    margin-top: rem(24);
+    margin-top: rem(19.2);
     font-size: rem(16);
     line-height: calc(32/16);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.133em;
 }
 
 .service-first__number{
@@ -53,6 +62,29 @@
     text-align: right;
     margin-top: rem(-20);
 }
+
+.circle{
+    width: rem(16);
+    height: rem(16);
+    background-color: $white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: rem(2); /* 適宜調整 */
+    margin-left: rem(7);
+}
+
+.circle-text{
+    width: rem(6);
+    height: rem(6);
+    background-color: $white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: rem(0) rem(2) 0 rem(4);
+}
+
+
+
+
 
 
 
@@ -106,7 +138,7 @@
 }
 
 
-.circle{
+.circle-sp{
     width: rem(8);
     height: rem(8);
     background-color: $white;
@@ -115,7 +147,7 @@
     margin-right: 5px; /* 適宜調整 */
 }
 
-.circle-text{
+.circle-text-sp{
     width: rem(6);
     height: rem(6);
     background-color: $white;
@@ -136,7 +168,7 @@
     @include mq(md){
         background-color: $white;
         padding: rem(40) rem(34) rem(47) rem(50);
-        margin-top: rem(-30);
+        margin-top: rem(-36.8);
         margin-right: rem(50);
         box-shadow: 0 0 rem(10) rem(2) rgba(0, 0, 0, 0.25);
     }
@@ -173,7 +205,7 @@
 .service-first__item:nth-child(n+3) {
     margin-top: rem(32);
     @include mq(md){
-        margin-top: rem(0);
+        margin-top: rem(14);
     }
 }
 

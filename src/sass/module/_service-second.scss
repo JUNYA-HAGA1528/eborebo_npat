@@ -6,10 +6,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: rem(73) rem(50) rem(105.5);
+    @include mq(md){
+        padding: rem(48) rem(50) rem(145.6) rem(36.8);
+    }
 }
 
 .service-second__flex{
     @include mq(md){
+        color: $white;
         display: flex;
         justify-content: space-between;
     }
@@ -17,6 +21,10 @@
 
 .service-second__sentence{
     width: 62.4%;
+    @include mq(md){
+        margin-top: rem(67.2);
+        width: 59.6%;
+    }
 }
 
 .service-second__lineup{
@@ -24,14 +32,15 @@
     font-size: rem(24);
     line-height: calc(32/24);
     letter-spacing: 0.04em;
-    border-bottom: solid 1px $black ;    
+    border-bottom: solid 1px $white ;    
 }
 
 .service-second__title{
     margin-top: rem(17.5);
     font-size: rem(40);
+    font-weight: $normal;
     line-height: calc(53/40);
-    letter-spacing: 0.04em;
+    letter-spacing: -0.04em;
 }
 
 .service-second__text{
@@ -39,6 +48,10 @@
     font-size: rem(16);
     line-height: calc(32/16);
     letter-spacing: 0.02em;
+    @include mq(md){
+        margin-top: rem(19.2);
+        letter-spacing: -0.14em;
+    }
 }
 
 .service-second__number{
@@ -120,8 +133,8 @@
     text-align: center;
     @include mq(md){
         background-color: $white;
-        padding: rem(40) rem(34) rem(47) rem(50);
-        margin-top: rem(-30);
+        padding: rem(57.6) rem(34) rem(47) rem(50);
+        margin-top: rem(-44.8);
         margin-right: rem(50);
         box-shadow: 0 0 rem(10) rem(2) rgba(0, 0, 0, 0.25);
     }
@@ -133,6 +146,7 @@
     letter-spacing:-0.04em;
     @include mq(md){
         text-align: left;
+        margin-left: rem(0)
     }
 }
 
@@ -170,18 +184,21 @@
 /* 2番目以降の要素に左の余白を設定 */
 .service-second__item + .service-second__item {
     @include mq(md){
-        margin-left: rem(13);
+        margin-left: rem(19.2);
     }
 }
 
 .service-second__item{
     margin-top: rem(19.2);
+    @include mq(md){
+        margin-top: rem(11.2);
+    }
 }
 
 .service-second__item:nth-child(n+3) {
     margin-top: rem(25.6);
     @include mq(md){
-        margin-top: rem(0);
+        margin-top: rem(11.2);
     }
 }
 
