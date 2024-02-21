@@ -1,0 +1,116 @@
+@use "global" as *;
+
+.privacy__heading{
+    margin-top: rem(68);
+    margin-left: rem(21.5);
+    @include mq(md){
+        margin-top: rem(62);
+        margin-left: rem(50); // レスポンシブでも左からの位置を固定
+
+    }
+}
+
+.privacy__inner{
+    max-width: $max-width-sp;
+    margin: auto;
+    @include mq(md){
+        max-width: $max-width-pc;
+    }
+}
+
+.privacy__jp{
+    font-family: $Sans-family;
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: calc(27/20);
+    letter-spacing: 0.17em;
+    @include mq(md){
+        font-size: rem(32);
+        line-height: calc(43/32);
+        letter-spacing: 0.04em;
+    }
+}
+
+.privacy__en{
+    color: $blue;
+    font-family: $Oswald-family;
+    font-size: rem(12);
+    font-weight: $bold;
+    line-height: 1;
+    text-transform: uppercase;
+    @include mq(md){
+        margin-top: rem(9);
+        font-size: rem(18);
+    }
+}
+
+.privacy__en{
+    display: inline-block;
+    position: relative;
+}
+
+.privacy__en::before {
+    content: "";/*線が表示される*/
+    width: rem(15.5);/*線の長さを指定*/
+    height: rem(1);/*線の太さを指定*/
+    /*「position」「top」「left」で、タイトルを基準に横線の位置を設定します。*/
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: rem(-22.5);/*0指定すると、文字の上に線が来る*/
+    @include mq(md){
+        width: rem(34);
+        left: rem(-50);
+        top: 75%;
+    }
+}
+
+.privacy-policy__inner{
+    max-width: $max-width-sp;
+}
+
+
+.privacy-policy__container{
+    margin-top: rem(20);
+    padding-bottom: rem(72);
+    @include mq(md){
+        margin-top: rem(65);
+        padding-bottom: rem(90);
+    }
+}
+
+.privacy-policy__wrapper + .privacy-policy__wrapper{
+    margin-top: rem(20.5);
+    @include mq(md){
+        margin-top: rem(42.4);
+    }
+}
+
+.privacy-policy__title{
+    font-size: rem(16);
+    line-height: calc(21/16);
+    letter-spacing: 0.025em;
+    @include mq(md){
+        font-size: rem(18);
+        line-height: calc(24/18);
+    }
+}
+
+.privacy-policy__text{
+    margin-top: rem(7.5);
+    font-size: rem(14);
+    line-height: calc(24/14);
+    letter-spacing: -0.09em;
+    @include mq(md){
+        font-size: rem(16);
+        line-height: calc(24/16);
+        letter-spacing: -0.1em;
+    
+    }
+}
+
+.privacy-policy__text--margin{
+    @include mq(md){
+        margin-top: rem(35);
+    }
+}
