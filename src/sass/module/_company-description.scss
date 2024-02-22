@@ -76,8 +76,11 @@
 }
 
 .company-description__representative{
-    margin-top: rem(14.4);
+    margin-top: rem(96);
     text-align: right;
+    @include mq(md){
+        margin-top: rem(14.4);
+    }
 }
 
 .company-description__representative-name{
