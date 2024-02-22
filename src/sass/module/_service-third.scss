@@ -6,17 +6,25 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: rem(73) rem(50) rem(59);
+    @include mq(md){
+        padding: rem(40) rem(32) rem(84.8) rem(50);
+    }
 }
 
 .service-third__flex{
     @include mq(md){
         display: flex;
         justify-content: space-between;
+        color: $white;
     }
 }
 
 .service-third__sentence{
     width: 62.4%;
+    @include mq(md){
+        margin-top: rem(36.8);
+        width: 52%;
+    }
 }
 
 .service-third__lineup{
@@ -24,21 +32,22 @@
     font-size: rem(24);
     line-height: calc(32/24);
     letter-spacing: 0.04em;
-    border-bottom: solid 1px $black ;    
+    border-bottom: solid 1px $white ;    
 }
 
 .service-third__title{
     margin-top: rem(17.5);
     font-size: rem(40);
+    font-weight: $normal;
     line-height: calc(53/40);
-    letter-spacing: 0.04em;
+    letter-spacing: -0.09em;
 }
 
 .service-third__text{
-    margin-top: rem(24);
+    margin-top: rem(17.6);
     font-size: rem(16);
     line-height: calc(32/16);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.17em;
 }
 
 .service-third__number{
@@ -124,7 +133,7 @@
     @include mq(md){
         background-color: $white;
         padding: rem(40) rem(34) rem(47) rem(50);
-        margin-top: rem(-30);
+        margin-top: rem(-43.2);
         margin-right: rem(50);
         box-shadow: 0 0 rem(10) rem(2) rgba(0, 0, 0, 0.25);
     }
@@ -138,7 +147,9 @@
     text-align: center;
     margin-left: rem(-22.4);
     @include mq(md){
-        margin-top: rem(56);
+        text-align: left;
+        margin-left: rem(0);
+        margin-top: rem(19.2);
         font-size: rem(20);
         line-height: calc(32/20);
     }
@@ -152,14 +163,12 @@
 
 .service-third__item + .service-third__item{
     margin-top: rem(14);
-    @include mq(md){
-        margin-left: rem(32);
-    }
 }
 
 .service-third__item{
     margin-top: rem(25.6);
     @include mq(md){
+        margin-top: rem(12.8);
         max-width: calc(22.75% - 2rem * 3 / 4 );
         width: 100%;
     }
@@ -168,7 +177,8 @@
 .service-third__item:nth-child(n+2) {
     margin-top: rem(24);
     @include mq(md){
-        margin-top: rem(0);
+        margin-top: rem(12.8);
+        margin-left: rem(-3.2);
     }
 }
 
@@ -194,6 +204,9 @@
     font-size: rem(12);
     line-height: calc(24/12);
     letter-spacing: 0.06em;
+    @include mq(md){
+        margin-top: rem(14.4);
+    }
 }
 
 .triangle {
@@ -201,7 +214,9 @@
     justify-content: center;
     margin-top: rem(25);
     @include mq(md){
-        margin-top: rem(-60);
+        margin-top: rem(-50);
+        margin-left: rem(10);
+        margin-right: rem(10);
         flex-direction: column;
     }
 }
@@ -209,4 +224,8 @@
 .triangle img{
     width: rem(30);
     height: rem(16);
+    @include mq(md){
+        width: rem(16);
+        height: rem(16);
+    }
 }
